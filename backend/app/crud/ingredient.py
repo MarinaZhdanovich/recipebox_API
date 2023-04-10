@@ -2,7 +2,7 @@ import logging
 from typing import List
 
 from sqlalchemy.orm import Session
-from backend.app.models.ingredient import Ingredient
+from app.models.ingredient import Ingredient
 
 
 logger = logging.getLogger("recipebox")

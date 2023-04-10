@@ -8,9 +8,9 @@ from app.schemas.ingredient import IngredientCreateModel
 from app.schemas.recipe import RecipeCreateModel
 from app.schemas.user import UserCreateModel
 
-from backend.app.crud.ingredient import create_init_ingredient
-from backend.app.crud.recipe import create_init_recipe
-from backend.app.crud.user import create_init_user
+from app.crud.ingredient import create_init_ingredient
+from app.crud.recipe import create_init_recipe
+from app.crud.user import create_init_user
 
 
 settings = Settings()
