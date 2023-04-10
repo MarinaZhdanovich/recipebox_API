@@ -26,8 +26,8 @@ def get_recipe_by_id(db: Session, recipe_id: int) -> Recipe:
     return db.query(Recipe).filter(Recipe.id == recipe_id).first()
 
 
-# def get_recipe_list(db: Session) -> List[Recipe]:
-#     return db.query(Recipe).all()
+def get_recipe_list(db: Session) -> List[Recipe]:
+    return db.query(Recipe).all()
 
 
 

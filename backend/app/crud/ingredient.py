@@ -23,7 +23,7 @@ def get_ingredient_by_id(db: Session, id_: int) -> Ingredient:
     return db.query(Ingredient).filter(Ingredient.id == id_).first()
 
 
-# def get_ingredient_list(db: Session) -> List[Ingredient]:
-#     return db.query(Ingredient).all()
+def get_ingredient_list(db: Session) -> List[Ingredient]:
+    return db.query(Ingredient).all()
 
 
