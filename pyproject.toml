@@ -1,0 +1,20 @@
+[tool.poetry]
+name = "recipebox-api"
+version = "0.1.0"
+description = "Graduation project"
+authors = ["MarinaZhdanovich <marina.zhdanovich@gmail.com>"]
+license = "MIT"
+readme = "README.md"
+packages = [{include = "recipebox_api"}]
+
+[tool.poetry.dependencies]
+python = "^3.10"
+fastapi = {extras = ["all"], version = "^0.95.0"}
+sqlalchemy = "^2.0.9"
+pydantic = "^1.10.7"
+alembic = "^1.10.3"
+
+
+[build-system]
+requires = ["poetry-core"]
+build-backend = "poetry.core.masonry.api"
