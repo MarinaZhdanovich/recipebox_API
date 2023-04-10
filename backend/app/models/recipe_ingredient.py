@@ -3,7 +3,7 @@ from app.db.base_class import Base
 from app.models.mixin import Timestamp
 from sqlalchemy.orm import relationship
 from app.models.recipe import Recipe
-from app.models.ingredient import Ingredient
+# from app.models.ingredient import Ingredient
 
 
 class RecipeIngredient(Timestamp, Base):
@@ -14,5 +14,4 @@ class RecipeIngredient(Timestamp, Base):
 
     recipe = relationship("Recipe", back_populates="ingredients")
     ingredient = relationship("Ingredient", back_populates="recipes")
-
 
