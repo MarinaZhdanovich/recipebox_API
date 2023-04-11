@@ -26,7 +26,7 @@ class Settings(BaseSettings):
     ]
 
     INIT_INGREDIENT: list = [
-        {"name": "egg", },
+        {"name": "egg   ", },
         {"name": "milk", },
         {"name": "salt", },
         {"name": "water", },
