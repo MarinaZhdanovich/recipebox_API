@@ -8,6 +8,7 @@ from app.schemas.ingredient import IngredientCreateModel
 from app.schemas.recipe import RecipeCreateModel
 from app.schemas.user import UserCreateModel
 
+
 from app.crud.ingredient import create_init_ingredient
 from app.crud.recipe import create_init_recipe
 from app.crud.user import create_init_user
@@ -56,4 +57,6 @@ def create_ingredient(db: Session):
             name=ingredient['name']
         )
         create_init_ingredient(db, db_ingredient)
+
+
 
