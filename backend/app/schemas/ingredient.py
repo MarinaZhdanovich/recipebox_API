@@ -1,8 +1,11 @@
+from typing import Optional
+
 from pydantic import BaseModel
 
 
 class IngredientBaseModel(BaseModel):
     name: str
+    units: Optional[str]
 
 
 class IngredientCreateModel(IngredientBaseModel):
@@ -18,10 +21,3 @@ class IngredientModel(IngredientBaseModel):
 
     class Config:
         orm_mode = True
-
-
-
-
-
-
-

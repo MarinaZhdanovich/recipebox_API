@@ -1,11 +1,12 @@
 import logging
-from typing import List
-
 from sqlalchemy.orm import Session
+
+from typing import List
 from app.models.recipe_ingredient import RecipeIngredient
 
 
-logger = logging.getLogger("recipebox")
+
+logger = logging.getLogger('recipebox')
 
 
 def create_init_recipe_ingredient(db: Session, recipe_ingredient: RecipeIngredient) -> RecipeIngredient:
@@ -14,10 +15,12 @@ def create_init_recipe_ingredient(db: Session, recipe_ingredient: RecipeIngredie
         ingredient_id=recipe_ingredient.ingredient_id,
         quantity=recipe_ingredient.quantity
     )
+
     db.add(db_recipe_ingredient)
     db.commit()
     db.refresh(db_recipe_ingredient)
-    logger.info(f'Created recipe_ingredient {db_recipe_ingredient}')
+
+    logger.info(f"Recipe ingredient {recipe_ingredient} created")
     return db_recipe_ingredient
 
 

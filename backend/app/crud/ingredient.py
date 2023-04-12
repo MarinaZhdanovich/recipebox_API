@@ -11,6 +11,7 @@ logger = logging.getLogger("recipebox")
 def create_init_ingredient(db: Session, ingredient: Ingredient) -> Ingredient:
     db_ingredient = Ingredient(
         name=ingredient.name,
+        units=ingredient.units
     )
     db.add(db_ingredient)
     db.commit()
@@ -25,5 +26,3 @@ def get_ingredient_by_id(db: Session, id_: int) -> Ingredient:
 
 def get_ingredient_list(db: Session) -> List[Ingredient]:
     return db.query(Ingredient).all()
-
-

@@ -2,6 +2,7 @@ import os
 from pathlib import Path
 from pydantic import BaseSettings
 
+
 BASE_DIR = (Path(__file__) / ".." / ".." / ".." / "..").resolve()
 ENV_PATH = os.path.join(BASE_DIR, ".env")
 
@@ -20,17 +21,17 @@ class Settings(BaseSettings):
 
     INIT_RECIPE: list = [
         {"name": "omelet", "description": "a great breakfast option", "difficulty": 2,
-         "instructions": "mix all the ingredients and put in the oven for 20 minutes"},
+         "instructions": "mix all the ingredients and put in the oven for 20 minutes", "user_id": 1},
         {"name": "rice milk soup", "description": "instant soup", "difficulty": 1,
-         "instructions": "cook rice for 20 minutes, add milk and bring to a boil"}
+         "instructions": "cook rice for 20 minutes, add milk and bring to a boil", "user_id": 1}
     ]
 
     INIT_INGREDIENT: list = [
-        {"name": "egg   ", },
-        {"name": "milk", },
-        {"name": "salt", },
-        {"name": "water", },
-        {"name": "rise", },
+        {"name": "egg", "units": "unit"},
+        {"name": "milk", "units": "ml"},
+        {"name": "salt", "units": "mg"},
+        {"name": "water", "units": "ml"},
+        {"name": "rise", "units": "g"},
     ]
 
     INIT_USER: dict = {
@@ -40,7 +41,6 @@ class Settings(BaseSettings):
         "is_active": "true",
         "role_id": 1
     }
-
     INIT_RECIPE_INGREDIENT: list = [
         {"recipe_id": 1, "ingredient_id": 1, "quantity": "10 units"},
         {"recipe_id": 1, "ingredient_id": 2, "quantity": "0.5 liters"},

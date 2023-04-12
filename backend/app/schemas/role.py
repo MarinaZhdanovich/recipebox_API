@@ -18,8 +18,3 @@ class RoleModel(RoleBaseModel):
 
     class Config:
         orm_mode = True
-
-
-
-
-
