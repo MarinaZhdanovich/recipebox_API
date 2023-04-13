@@ -16,7 +16,7 @@ def create_init_ingredient(db: Session, ingredient: Ingredient) -> Ingredient:
     db.add(db_ingredient)
     db.commit()
     db.refresh(db_ingredient)
-    logger.info(f'Created author {db_ingredient}')
+    logger.info(f'Created ingredient {db_ingredient}')
     return db_ingredient
 
 
