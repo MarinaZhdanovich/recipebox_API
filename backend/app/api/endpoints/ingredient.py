@@ -21,3 +21,5 @@ def get_ingredient(ingredient_id: int, db: Session = Depends(get_db)) -> Ingredi
         logger.error(f"Ingredient does\'t with id={ingredient_id} exist")
         raise HTTPException(status_code=404, detail=f"Ingredient does\'t with id={ingredient_id} exist")
 
+
+

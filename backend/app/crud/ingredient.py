@@ -26,3 +26,7 @@ def get_ingredient_by_id(db: Session, id_: int) -> Ingredient:
 
 def get_ingredient_list(db: Session) -> List[Ingredient]:
     return db.query(Ingredient).all()
+
+
+
+
