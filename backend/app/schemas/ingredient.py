@@ -1,7 +1,6 @@
-from typing import Optional, List
+from typing import Optional
 
-from pydantic import BaseModel, Field
-from .recipe import RecipeModel
+from pydantic import BaseModel
 
 
 class IngredientBaseModel(BaseModel):
@@ -18,16 +17,7 @@ class IngredientUpdateModel(IngredientBaseModel):
 
 
 class IngredientModel(IngredientBaseModel):
-    id: int = Field(alias='ingredient_id')
-    name: str = Field(alias='ingredient_name')
-    units: str = Field(alias='ingredient_units')
+    id: int
 
     class Config:
         orm_mode = True
-        allow_population_by_field_name = True
-
-
-class IngredientSchemaModel(IngredientModel):
-    recipes: List[RecipeModel]
-
-
