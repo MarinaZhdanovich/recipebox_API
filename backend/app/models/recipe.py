@@ -5,7 +5,6 @@ from app.db.base_class import Base
 from app.models.mixin import Timestamp
 
 from .user import User
-from .ingredient import Ingredient
 
 
 class Recipe(Timestamp, Base):

@@ -3,8 +3,7 @@ from app.db.base_class import Base
 from app.models.mixin import Timestamp
 from sqlalchemy.orm import relationship
 
-from .recipe import Recipe
-from .ingredient import Ingredient
+from sqlalchemy.ext.associationproxy import association_proxy
 
 
 class RecipeIngredient(Timestamp, Base):
