@@ -1,18 +1,13 @@
 from fastapi import APIRouter
-
-from .endpoints import ingredient
+from .endpoints import recipe, ingredient
 
 
 api_router = APIRouter()
 
 api_router.include_router(
-    ingredient.ingredient_router)
+    recipe.recipe_router
+)
 
-# api_router.include_router(
-#     order.order_router
-# )
-#
-#
-# api_router.include_router(
-#     book.book_router, prefix='/books'
-# )
+api_router.include_router(
+    ingredient.ingredient_router
+)
