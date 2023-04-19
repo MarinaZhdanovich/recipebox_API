@@ -15,7 +15,7 @@ def start_application(config: Settings):
         debug=True,
         title=config.PROJECT_NAME,
         version=config.PROJECT_VERSION,
-        description="Book store emulator"
+        description="Receipt book emulator"
     )
     return application
 
