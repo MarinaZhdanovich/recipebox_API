@@ -18,7 +18,7 @@ def get_ingredient(ingredient_id: int, db: Session = Depends(get_db)):
     return ingredient
 
 
-@ingredient_router.get("/", response_model=List[IngredientModel])
+@ingredient_router.get('/ingredients/', response_model=List[IngredientModel])
 def get_ingredients(db: Session = Depends(get_db)):
     return db.query(Ingredient).all()
 
