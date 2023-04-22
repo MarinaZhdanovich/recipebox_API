@@ -27,6 +27,7 @@ Create a database migration using Alembic by running the command: alembic revisi
 Apply the migration to the database by running the command:alembic upgrade head
 
 Apply the script to populate the role table in the database: insert into role(id, name, create_at, update_at) values(1, 'admin', '2023-04-11', '2023-04-11'),(2, 'user', '2023-04-11','2023-04-11').
+
 Fixtures (sample data) are specified in the code to initialize the tables. Run them in the following order using python .\run_db.py: user, recipe, ingredient, recipe-ingredient
 
 Start the server by running the following command: uvicorn main:app --reload
