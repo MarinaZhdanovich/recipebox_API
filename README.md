@@ -117,7 +117,7 @@ __init__.py: An empty file to make the backend directory a Python package.
     app directory: 
     api: The api directory contains the API endpoints for the application.
     core: The core directory contains the core configuration code for the application. 
-    crud: The crud directory contains the CRUD (Create, Read, Update, Delete) operations for the database models
+    crud: The crud directory contains the CRUD(Create, Read, Update, Delete) operations for the database models
     db: The db directory contains the database session setup and initialization code.
     models: The models directory contains the database models.
     schemas: The schemas directory contains the Pydantic schema definitions for the database models.
