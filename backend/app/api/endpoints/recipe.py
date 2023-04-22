@@ -46,3 +46,13 @@ def create_recipe(recipe: RecipeModel, db: Session = Depends(get_db)):
         instructions=recipe.instructions,
         user_id=recipe.user_id
     ))
+
+
+@recipe_router.delete("/recipes/{recipe_id}")
+def delete_recipe(recipe_id: int, db: Session = Depends(get_db)):
+    recipe = db.query(Recipe).filter(Recipe.id == recipe_id).first()
+    if not recipe:
+        raise HTTPException(status_code=404, detail="Recipe not found")
+    db.delete(recipe)
+    db.commit()
+    return {"message": "Recipe successfully deleted"}
