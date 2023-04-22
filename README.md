@@ -22,8 +22,6 @@ If your interpreter version is different, modify it in pyproject.toml
 
 Install the libraries using the command: poetry add Alembic, Pydentic, SQLAlchemy
 
-Install Alembic in your Python virtual environment if it is not already installed by running the following command: alembic init alembic 
-
 Create a database migration using Alembic by running the command: alembic revision --autogenerate -m 'create db'
 
 Apply the migration to the database by running the command:alembic upgrade head
