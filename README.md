@@ -105,7 +105,7 @@ run_db.py: A script to initialize the database and create tables.
 
 main.py: The main entry point for the FastAPI application.
 
-__init__.py: An empty file to make the backend directory a Python package.
+__init__.py: An empty file to make the backend directory a Python package. <br>
 
 
 
@@ -123,8 +123,7 @@ models: The models directory contains the database models.
 
 schemas: The schemas directory contains the Pydantic schema definitions for the database models.
 
-__init__.py: An empty file to make the app directory a Python package.
-
+__init__.py: An empty file to make the app directory a Python package. <br>
 
 
 **api directory.** <br>
@@ -133,8 +132,7 @@ endpoints: The endpoints directory contains the implementation code for the API 
 
 api.py: The main API router that ties all the endpoints together.
 
-__init__.py: An empty file to make the api directory a Python package.
-
+__init__.py: An empty file to make the api directory a Python package. <br>
 
 
 **core directory.** <br>
@@ -142,7 +140,6 @@ __init__.py: An empty file to make the api directory a Python package.
 config.py: Configuration settings for the application.
 
 __init__.py: An empty file to make the core directory a Python package.
-
 
 
 **crud directory.**
@@ -155,8 +152,7 @@ recipe_ingredient.py: CRUD operations for the RecipeIngredient model.
 
 user.py: CRUD operations for the User model.
 
-__init__.py: An empty file to make the crud directory a Python package.
-
+__init__.py: An empty file to make the crud directory a Python package. <br>
 
 
 **db directory.**
