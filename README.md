@@ -5,6 +5,10 @@ This is a backend API for a recipe box application, built using FastAPI and SQLA
 1. Installation 
 Clone the repository: git clone https://github.com/MarinaZhdanovich/recipebox_API.git
 Install the dependencies using Poetry: poetry install
+Install PostgreSQL and all the necessary libraries if they are not already installed on your computer. Install psycopg2 using the following command:  pip install psycopg2 
+Install Alembic in your Python virtual environment if it is not already installed by running the following command: alembic init alembic 
+Create a database migration using Alembic by running the command: alembic revision --autogenerate -m 'create db'
+Apply the migration to the database by running the command:alembic upgrade head 
 Create the database by running the following command from the project root directory: backend/run_db.py
 Start the server by running the following command: uvicorn main:app --reload
 2. Project Structure
