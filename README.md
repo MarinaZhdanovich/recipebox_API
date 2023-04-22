@@ -140,4 +140,5 @@ __init__.py: An empty file to make the backend directory a Python package.
     init.py: An empty file to make the crud directory a Python package.
     
     db directory: 
-    base.py: Base class for SQLAlchemy models. base_class.py: Base class for custom SQLAlchemy models.
+    base.py: Base class for SQLAlchemy models.
+    base_class.py: Base class for custom SQLAlchemy models.
