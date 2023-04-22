@@ -96,8 +96,8 @@ README.md: The README file containing instructions for installing and running th
 ├─ logs  
 ├─ poetry.lock
 ├─ pyproject.toml
-├─ README.md
-
+└─ README.md
+```
 
 ## Backend
 
