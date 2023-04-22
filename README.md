@@ -108,9 +108,9 @@ main.py: The main entry point for the FastAPI application.
 __init__.py: An empty file to make the backend directory a Python package. 
 
 
-
-**app directory.** <br>
-
+---
+app directory.
+---
 api: The api directory contains the API endpoints for the application.
 
 core: The core directory contains the core configuration code for the application.
@@ -125,9 +125,9 @@ schemas: The schemas directory contains the Pydantic schema definitions for the 
 
 __init__.py: An empty file to make the app directory a Python package. 
 
-
-**api directory.** <br>
-
+---
+api directory.
+---
 endpoints: The endpoints directory contains the implementation code for the API endpoints.
 
 api.py: The main API router that ties all the endpoints together.
