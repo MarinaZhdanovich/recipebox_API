@@ -8,9 +8,19 @@ This is a backend API for a recipe box application, built using FastAPI and SQLA
 
 Clone the repository: git clone https://github.com/MarinaZhdanovich/recipebox_API.git
 
+Set up the environment using the command: python -m venv env and .env\Scripts\activate
+
+Connect to PostgreSql through DBeaver and create a database named 'recipes'
+
+Define the settings for connecting to the database (port, database name, username, and password) in the .env file
+
 Install the dependencies using Poetry: poetry install
 
 Install PostgreSQL and all the necessary libraries if they are not already installed on your computer. Install psycopg2 using the following command:  pip install psycopg2 
+
+If your interpreter version is different, modify it in pyproject.toml
+
+Install the libraries using the command: poetry add Alembic, Pydentic, SQLAlchemy
 
 Install Alembic in your Python virtual environment if it is not already installed by running the following command: alembic init alembic 
 
@@ -18,10 +28,10 @@ Create a database migration using Alembic by running the command: alembic revisi
 
 Apply the migration to the database by running the command:alembic upgrade head
 
-Create the database by running the following command from the project root directory: backend/run_db.py
+Apply the script to populate the role table in the database: insert into role(id, name, create_at, update_at) values(1, 'admin', '2023-04-11', '2023-04-11'),(2, 'user', '2023-04-11','2023-04-11').
+Fixtures (sample data) are specified in the code to initialize the tables. Run them in the following order using python .\run_db.py: user, recipe, ingredient, recipe-ingredient
 
 Start the server by running the following command: uvicorn main:app --reload
-
 
 ## Project Structure
 
@@ -89,7 +99,7 @@ README.md: The README file containing instructions for installing and running th
 ├─ poetry.lock
 ├─ pyproject.toml
 ├─ README.md
-```
+
 
 ## Backend
 
