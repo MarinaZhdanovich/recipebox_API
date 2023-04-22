@@ -114,52 +114,30 @@ main.py: The main entry point for the FastAPI application.
 
 __init__.py: An empty file to make the backend directory a Python package. 
 
-### app directory
+    **app directory**: The app directory contains the following subdirectories and files:
+    api: The api directory contains the API endpoints for the application.
+    core: The core directory contains the core configuration code for the application. 
+    crud: The crud directory contains the CRUD (Create, Read, Update, Delete) operations for the database models.
+    db: The db directory contains the database session setup and initialization code.
+    models: The models directory contains the database models.
+    schemas: The schemas directory contains the Pydantic schema definitions for the database models.
+    init.py: An empty file to make the app directory a Python package.
 
-api: The api directory contains the API endpoints for the application.
+    **api directory**: The api directory contains the following files: 
+    endpoints: The endpoints directory contains the implementation code for the API endpoints.
+    api.py: The main API router that ties all the endpoints together. 
+    init.py: An empty file to make the api directory a Python package.
 
-core: The core directory contains the core configuration code for the application.
+    **core directory**: The core directory contains the following files:
+    config.py: Configuration settings for the application.
+    init.py: An empty file to make the core directory a Python package.
 
-crud: The crud directory contains the CRUD (Create, Read, Update, Delete) operations for the database models.
-
-db: The db directory contains the database session setup and initialization code.
-
-models: The models directory contains the database models.
-
-schemas: The schemas directory contains the Pydantic schema definitions for the database models.
-
-__init__.py: An empty file to make the app directory a Python package. 
-
-### api directory
-
-endpoints: The endpoints directory contains the implementation code for the API endpoints.
-
-api.py: The main API router that ties all the endpoints together.
-
-__init__.py: An empty file to make the api directory a Python package. 
-
-
-### core directory
-
-config.py: Configuration settings for the application.
-
-__init__.py: An empty file to make the core directory a Python package.
-
-
-### crud directory
-
-ingredient.py: CRUD operations for the Ingredient model.
-
-recipe.py: CRUD operations for the Recipe model.
-
-recipe_ingredient.py: CRUD operations for the RecipeIngredient model.
-
-user.py: CRUD operations for the User model.
-
-__init__.py: An empty file to make the crud directory a Python package. 
-
-
-### db directory
-base.py: Base class for SQLAlchemy models.
-
-base_class.py: Base class for custom SQLAlchemy models.
+    **crud directory**: The crud directory contains the following files: 
+    ingredient.py: CRUD operations for the Ingredient model. 
+    recipe.py: CRUD operations for the Recipe model. 
+    recipe_ingredient.py: CRUD operations for the RecipeIngredient model.
+    user.py: CRUD operations for the User model. 
+    init.py: An empty file to make the crud directory a Python package.
+    
+    **db directory**: The db directory contains the following files:
+    base.py: Base class for SQLAlchemy models. base_class.py: Base class for custom SQLAlchemy models.
