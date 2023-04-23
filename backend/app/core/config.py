@@ -85,7 +85,7 @@ LOGGING_CONFIG = {
         }
     },
     "loggers": {
-        "bookshelf": {
+        "recipebox": {
             "handlers": ["console", "file"],
             "level": "DEBUG"
         }
