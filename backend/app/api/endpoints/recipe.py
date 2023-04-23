@@ -33,7 +33,7 @@ def get_receipts(db: Session = Depends(get_db)):
 
 
 @recipe_router.get("/recipes/{recipe_name}", response_model=RecipeModel)
-async def get_recipe_name(recipe_name: str, db: Session = Depends(get_db)):
+def get_recipe_name(recipe_name: str, db: Session = Depends(get_db)):
     recipe = get_recipe_by_name(db, recipe_name)
     logger.info(f"Found receipt of {recipe_name}")
     if not recipe:
