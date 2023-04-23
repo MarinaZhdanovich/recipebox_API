@@ -24,14 +24,6 @@ def create_init_recipe(db: Session, recipe: Recipe) -> Recipe:
     return db_recipe
 
 
-def get_recipe_by_id(db: Session, id_: int):
-    return db.query(Recipe).options(joinedload(Recipe.ingredients)).where(Recipe.id == id_).first()
-
-
-def get_recipe_list(db: Session) -> List[Recipe]:
-    return db.query(Recipe).all()
-
-
 def create_add_recipe(db: Session, recipe: Recipe) -> Recipe:
     db_recipe = Recipe(
         name=recipe.name,
@@ -46,3 +38,15 @@ def create_add_recipe(db: Session, recipe: Recipe) -> Recipe:
 
     logger.info(f'New entry in the recipe book {db_recipe}')
     return db_recipe
+
+
+def get_recipe_by_id(db: Session, id_: int):
+    return db.query(Recipe).options(joinedload(Recipe.ingredients)).where(Recipe.id == id_).first()
+
+
+def get_recipe_list(db: Session) -> List[Recipe]:
+    return db.query(Recipe).all()
+
+
+def get_recipe_by_name(db: Session, name_: str):
+    return db.query(Recipe).options(joinedload(Recipe.ingredients)).where(Recipe.name == name_).first()
